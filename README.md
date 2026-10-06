@@ -1,108 +1,127 @@
 ```markdown
-# GamingRent — Plataforma de Aluguel de Videogames
+# GamerLink — Comunidades de Gamers
 
-Aplicativo frontend desenvolvido para a disciplina de **Cross-Platform Application Development** (FIAP - 2º Ano, Turma: 2CCPW).
+GamerLink é uma plataforma digital para descobrir jogos, encontrar comunidades, receber recomendações e participar de eventos. A aplicação foi desenvolvida para a disciplina **Cross-Platform Application Development** (FIAP - 2º Ano, Turma: 2CCPW).
 
 ## Integrantes do Grupo e Papéis
-* **Guilherme Ferraz de Medeiros (RM: 564743)** — Arquiteto de Software & Desenvolvedor Frontend (Lead)
-* **Roberto Marques Moreira (RM: 564935)** — UI/UX Designer, Prototipagem & Documentação
 
----
+- **Guilherme Ferraz de Medeiros (RM: 564743)** — Arquiteto de Software & Desenvolvedor Frontend (Lead)
+- **Roberto Marques Moreira (RM: 564935)** — UI/UX Designer, Prototipagem & Documentação
 
-## 1. Visão Geral e Proposta de Valor
-O **GamingRent** é uma plataforma digital voltada para a locação de jogos de videogame (físicos e digitais) para diferentes plataformas (PlayStation, Xbox e Nintendo Switch). O aplicativo democratiza o acesso aos games por meio de um sistema de assinatura flexível e aluguel avulso, permitindo que os jogadores desfrutem dos principais lançamentos e clássicos sem precisar pagar o preço cheio de aquisição de cada título.
+## Visão Geral
 
-## 2. Descrição do Problema e Público-Alvo
-* **O Problema:** Os jogos de videogame atuais possuem custos elevados de lançamento, o que limita o acesso de grande parte dos jogadores a um catálogo diversificado. Além disso, muitos títulos são finalizados rapidamente e ficam parados na prateleira, gerando desperdício financeiro.
-* **Público-Alvo:** Gamers entusiastas, pais em busca de alternativas econômicas para entretenimento e jogadores casuais que desejam testar títulos antes de comprá-los de forma definitiva.
+O GamerLink reúne jogos, comunidades e eventos em uma experiência mobile-first. A interface usa uma identidade visual moderna baseada em um fundo roxo profundo, azul neon, verde neon e tipografia digital.
 
-## 3. Principais Funcionalidades do MVP
-1. **Catálogo de Jogos:** Listagem interativa com filtros por plataforma (PS5, Xbox, Switch), gênero e lançamentos.
-2. **Gestão de Aluguel:** Escolha de período de locação (7, 15 ou 30 dias) e adesão a planos de assinatura mensais.
-3. **Painel do Usuário:** Acompanhamento de jogos alugados ativos, prazos de devolução e histórico de pedidos.
-4. **Wishlist (Lista de Desejos):** Seção de favoritos para acompanhar a chegada de novos títulos.
+## Funcionalidades implementadas
 
-## 4. Identidade Visual e Marca
-* **Naming Rationale:** Combinação de *Gaming* (jogos) e *Rent* (aluguel), criando um conceito direto, moderno e de fácil memorização no universo dos games.
-* **Tom de Voz:** Jovem, dinâmico, acessível e gamer.
-* **Paleta de Cores:** * Roxo Escuro / Gamer (`#1A0B2E`) — Fundo principal e imersão
-  * Azul Neon (`#00F0FF`) / Verde Neon (`#39FF14`) — Ações e destaques visuais
-  * Branco (`#FFFFFF`) — Contraste e legibilidade de textos
-* **Tipografia:** Família *Poppins* ou *Montserrat* (pesos Bold e Regular).
+### Catálogo de jogos
 
-## 5. Modelo de Negócio e Pitch
-* **Ideia de Venda (Pitch):** "Comprar todos os lançamentos de videogame custa caro e acumula jogos parados na estante. Com o GamingRent, você aluga ou assina os melhores títulos por uma fração do preço, joga o quanto quiser, e troca por outro jogo assim que zerar."
-* **Modelo de Negócio:** Assinatura mensal recorrente (SaaS) em diferentes tiers e modalidade de aluguel avulso por jogo.
+- Apresentação de quatro jogos reais.
+- Informações de gênero, plataforma, nota e número de seguidores.
+- Pesquisa por nome, gênero ou plataforma.
+- Imagens dos jogos com fallback visual quando a URL não puder ser carregada.
 
----
+### Comunidades
 
-## Requisitos Técnicos e Execução
+- Listagem de comunidades por plataforma e tamanho da audiência.
+- Pesquisa e visualização das comunidades.
+- Ação de entrar ou sair de uma comunidade.
+- Estado local de participação por comunidade.
 
-- Node.js 18 ou superior
-- npm
+### Eventos
 
-### Instalação
+- Listagem de eventos próximos.
+- Visualização de detalhes do evento.
+- Informações de data, horário, local, cidade, participante e ingresso.
+- Representação visual da localização no mapa.
+- Confirmação de presença.
+- Fluxo de pagamento para ingresso individual.
+- Fluxo de assinatura mensal Gamer Pass.
+- Acesso ilimitado a eventos enquanto a assinatura estiver ativa.
+- Exibição do estado da assinatura no perfil.
+- Contagem de eventos confirmados no perfil.
 
-No diretório do projeto, execute:
+### Perfil
+
+- Informações do usuário e data de entrada.
+- Estatísticas de comunidades, eventos e conquistas.
+- Exibição do status da assinatura Gamer Pass.
+- Acesso ao histórico de eventos confirmados.
+- Logout da aplicação.
+
+### Identidade visual
+
+- Marca GamerLink com logo personalizado.
+- Paleta de cores: roxo `#1A0B2E`, azul `#00F0FF`, verde `#39FF14` e branco.
+- Fontes Orbitron e Outfit.
+- Ícones, gradientes, botões e sombras personalizados.
+- Favicon e marca pública personalizados.
+
+## Requisitos
+
+- Node.js 18 ou superior.
+- npm.
+- Git.
+
+## Instalação
 
 ```bash
 npm install
-
 ```
 
-### Executar em modo de desenvolvimento
+## Executar em modo de desenvolvimento
+
+```bash
+npm run dev
+```
+
+O Vite usa a porta `5173` por padrão. Para uma porta específica:
 
 ```bash
 npm run dev -- --host 0.0.0.0 --port 4173
-
 ```
 
-A aplicação ficará disponível em:
+A aplicação ficará disponível em `http://localhost:4173/`.
 
-```text
-http://localhost:4173/
-
-```
-
-> A porta 4173 foi escolhida porque a 5173 pode já estar em uso em algumas máquinas.
-
-### Build de produção
+## Build de produção
 
 ```bash
 npm run build
-
 ```
 
-### Preview da build
+O resultado será gerado no diretório `dist/`.
+
+## Visualização da build
+
+```bash
+npm run preview
+```
+
+Para preview em outra porta:
 
 ```bash
 npm run preview -- --host 0.0.0.0 --port 4173
-
 ```
 
-### Estrutura principal
+## Estrutura principal
 
 ```text
 CP456-CPAD-guif/
-├── .figma/
-│   └── make/
-│       └── site.json
-├── dist/
-│   ├── assets/
-│   └── index.html
-├── node_modules/
+├── public/
+│   ├── brand-mark.svg
+│   └── favicon.svg
 ├── src/
 │   ├── App.tsx
+│   ├── EventPlatform.tsx
 │   ├── index.css
 │   ├── main.tsx
 │   └── vite-env.d.ts
 ├── index.html
-├── package-lock.json
 ├── package.json
+├── package-lock.json
 ├── README.md
 ├── tsconfig.json
 └── vite.config.ts
-
 ```
 ### Prints do Aplicativo
 ###  Tela de login
@@ -118,6 +137,19 @@ CP456-CPAD-guif/
 ### Tela de perfil
 <img width="818" height="907" alt="Screenshot_217" src="https://github.com/user-attachments/assets/d834b8f6-d871-440d-a336-648230d14215" /> 
 
-```
+## Fluxo de execução
 
-```
+1. O usuário acessa a tela de login.
+2. O usuário entra com `admin` e `admin` para visualizar a experiência demo.
+3. O usuário pode pesquisar jogos e navegar entre comunidades, eventos e perfil.
+4. Ao selecionar um evento, é possível visualizar a localização e confirmar a presença.
+5. O usuário pode seguir para o pagamento ou ativar o Gamer Pass mensal.
+6. A assinatura ativa fornece acesso ilimitado aos eventos.
+7. O perfil mostra o status da assinatura e a quantidade de eventos confirmados.
+
+## Observações
+
+- A aplicação usa React, TypeScript e Vite.
+- A interface é responsiva e otimizada para viewport móvel.
+- O arquivo de configuração do Vite pode exibir avisos sobre `__dirname` e importação JSON; eles não impedem a compilação.
+- O fluxo de pagamento e assinatura é uma experiência de demonstração baseada em estado local e não conecta a um gateway de pagamento real.
